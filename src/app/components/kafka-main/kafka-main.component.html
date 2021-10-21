@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            Message Box
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Send your message to Kafka</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <form [formGroup]="messageProduceForm">
+                <div class="row d-flex">
+                    <div class="form-floating mb-3 col">
+                        <input type="text" formControlName="topic" class="form-control" id="floatingInput" placeholder="Topic">
+                        <label for="floatingInput" style="margin-left: 7px;">Topic</label>
+                    </div>
+                    <div class="form-floating mb-3 col">
+                        <input type="text" formControlName="message" class="form-control" id="floatingInput1" placeholder="name@example.com">
+                        <label for="floatingInput1" style="margin-left: 7px;">Message</label>
+                    </div>
+                </div>
+            </form>
+            <button  (click)="produceMessageToKafka()" class="btn btn-primary">Go somewhere</button>
+        </div>
+    </div>
+
+</div>
